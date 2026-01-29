@@ -1,0 +1,40 @@
+$tabs: '.tabs';
+
+#{$tabs} {
+    &-link {
+        font-size: .9375rem;
+        padding: .75rem 1rem;
+        display: block;
+        font-weight: 600;
+        position: relative;
+
+
+
+        @media (max-width:1280px) {
+            padding: .5rem 0;
+            text-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::after {
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-right: 1px solid currentColor;
+                border-top: 1px solid currentColor;
+                display: block;
+                transform: rotate(45deg);
+            }
+        }
+
+        @media (min-width:1280px) {
+
+            &:hover,
+            &.is-current {
+                background-color: #fff;
+                color: #445664;
+            }
+        }
+    }
+}

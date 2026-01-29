@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- Final compiled CSS -->
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/slick.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --brand-color: #73B936;
+      --brand-color-inverse: #fff;
+    }
+  </style>
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Slick JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+
+<body>
+  <div id="page-wrapper">
+    <header id="header" class="header">
+      <div class="header-main">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="flex flex-wrap md:flex-nowrap justify-between items-center xl:gap-20 md:gap-10 gap-3">
+            <div class="flex items-center gap-5">
+              <a href="javascript:void(0)" class="btn-hamburger hamburger-js xl:hidden">
+                <span></span>
+              </a>
+              <div class="header-logo">
+                <a href="#" class="logo">
+                  <img src="assets/images/logo.svg" alt="logo" width="" height="">
+                </a>
+              </div>
+            </div>
+            <div class="header-search">
+              <form id="" class="main-search">
+                <div class="main-search__field">
+                  <input placeholder="Search ..." class="form-control input-trigger-js" id="srch-keyword-js" type="text"
+                    name="" value="">
+                </div>
+
+                <div class="main-search__action">
+                  <button type="submit" class="form-button" aria-label="Search">
+                    <svg class="svg-icon text-brand-500">
+                      <use xlink:href="/assets/images/sprite.svg#icon-search"></use>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="header-controls">
+              <a class="header-action border rounded-full xl:hover:border-brand-500" href="#">
+                <span class="header-action-icon">
+                  <svg class="svg-icon svg-icon--30">
+                    <use xlink:href="/assets/images/sprite.svg#icon-user"></use>
+                  </svg>
+                </span>
+                <span class="header-action-label hidden xl:block">
+                  <b>Mano paskyra</b>
+                  0Prisijungti
+                </span>
+              </a>
+              <a class="header-action rounded-full xl:bg-brand-100 bg-brand-100 xl:hover:bg-brand-500 xl:hover:text-white"
+                href="#">
+                <span class="header-action-icon text-brand-500">
+                  <svg class="svg-icon svg-icon--30">
+                    <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </span>
+                <span class="cart-count xl:hidden">0</span>
+                <span class="header-action-label hidden xl:block">
+                  <b>Krepšelis</b>
+                  <span class="cart-count">0 prekių</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="header-nav fixed inset-y-0 left-0 z-50 w-[280px] transform -translate-x-full transition-transform duration-300 ease-in-out xl:static xl:translate-x-0 xl:w-auto xl:inset-auto"
+        id="HDR-NAV">
+        <div class="xl:hidden py-4 flex items-center px-6 border-b border-gray-100 justify-between bg-white">
+          <a href="#" class="logo">
+            <img src="assets/images/logo.svg" alt="logo" width="" height="">
+          </a>
+          <button onclick="closeHeaderNav()">✕</button>
+        </div>
+        <div class="header-bottom p-5 xl:p-0">
+          <div class="max-w-[1360px] xl:px-[20px] mx-auto h-full xl:h-auto">
+            <!-- Navigation Menu Here -->
+            <div class="flex xl:flex-row flex-col xl:items-center justify-between h-full xl:h-auto">
+              <div id="main-header-nav" class="tabs tabs--header-nav flex xl:flex-row flex-col  xl:items-center">
+                <button class="tabs-link is-current" data-menu-id="#productsTab">Products</button>
+                <button class="tabs-link" data-menu-id="#servicesTab">Services</button>
+                <button class="tabs-link">Promotions</button>
+              </div>
+              <div class="header-contact flex xl:flex-row flex-col xl:items-center gap-2 xl:gap-4">
+                Turite klausimų?
+                <a href="tel:+370 622 94999" class="flex items-center gap-2">
+                  <i class="svg-icon svg-icon--20">
+                    <svg class="text-brand-500">
+                      <use xlink:href="/assets/images/sprite.svg#icon-call"></use>
+                    </svg>
+                  </i>
+                  <span>+370 622 94999</span>
+                </a>
+              </div>
+              <nav class="nav nav--secondary flex xl:flex-row flex-col xl:items-center">
+                <a href="#" class="nav-link">Kontaktai</a>
+                <a href="#" class="nav-link">Pristatymas</a>
+                <a href="#" class="nav-link">Tinklaraštis</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-tabs-wrapper">
+          <div id="productsTab" class="tab-content">
+            <div class="mobile-header xl:hidden p-4 font-semibold">
+              <button onclick="closeTabContent()">
+                <div class="mobile-header xl:hidden inline-flex items-center gap-2 font-semibold">
+                  <span class="svg-icon svg-icon--sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                      </path>
+                    </svg>
+                  </span>
+                  Back Menu
+              </button>
+            </div>
+            <div class="max-w-[1360px] px-[20px] mx-auto">
+              <nav class="main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-1"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Oro kondicionieriai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-2"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Šilumos siurbliai oras vanduo</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-3"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Rekuperatoriai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-4"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Mobilūs oro kondicionieriai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-5"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Multi-Split oro kondicionieriai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-6"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Šildytuvai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#menu-icon-7"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Buitiniai ventiliatoriai</span>
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="svg-icon svg-icon--40">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-more"></use>
+                        </svg>
+                      </span>
+                      <span class="label">Kitos kategorijos</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id="servicesTab" class="tab-content">
+            <div class="mobile-header xl:hidden p-4 font-semibold">
+              <button onclick="closeTabContent()">
+                <div class="mobile-header xl:hidden inline-flex items-center gap-2 font-semibold">
+                  <span class="svg-icon svg-icon--sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                      </path>
+                    </svg>
+                  </span>
+                  Back Menu
+              </button>
+            </div>
+            <div class="max-w-[1360px] px-[20px] mx-auto">
+              <h4>Services tab Content here</h4>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div id="nav-overlay"
+      class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+    </div>
+    <main class="main" id="main">
+      <section id="home" class="section">
+        <div class="hero-slider js--hero-slider">
+          <!-- Slide 1 -->
+          <div class="hero-slider-item">
+            <div class="bg-[#F0F1F1] overflow-hidden relative">
+              <!-- Content -->
+              <div class="hero-slider-content xl:max-w-[1360px] px-[20px] mx-auto">
+                <div class="content max-w-[510px]">
+                  <h2 class="text-xl md:text-3xl font-semibold">
+                    Gausus oro kondicionierių pasirinkimas
+                  </h2>
+                  <div class="font-semibold md:text-xl text-md">
+                    nuo <span>399,75 €</span>
+                  </div>
+                  <a href="#"
+                    class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
+                    Rinktis
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <!-- Image -->
+              <div class="hero-slider-img relative h-full">
+                <picture>
+                  <source srcset="/assets/images/slider-img-1.jpg" media="(min-width: 768px)">
+                  <img srcset="/assets/images/slider-img-1-mob.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 (copy paste for more) -->
+          <div class="hero-slider-item">
+            <div class="bg-[#F0F1F1] overflow-hidden relative">
+              <!-- Content -->
+              <div class="hero-slider-content xl:max-w-[1360px] px-[20px] mx-auto">
+                <div class="content max-w-[510px]">
+                  <h2 class="text-2xl md:text-3xl font-semibold ">
+                    Slider Content Example 2
+                  </h2>
+                  <div class="font-semibold text-xl">
+                    nuo <span>399,75 €</span>
+                  </div>
+                  <a href="#"
+                    class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
+                    Rinktis
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <!-- Image -->
+              <div class="hero-slider-img relative h-full">
+                <img src="/assets/images/slider-img-1.jpg" alt="" class="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="category-products" class="section pt-14">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="xl:grid grid-cols-12 gap-1 border rounded-lg">
+
+            <!-- Sidebar -->
+            <aside class="col-span-12 md:col-span-3 xl:border-r xl:p-7 p-4">
+              <div class="aside-card flex flex-col md:flex-row xl:flex-col h-full gap-5 justify-between">
+                <div class="aside-card-head flex gap-2 items-center xl:block">
+                  <span class="svg-icon svg-icon--40">
+                    <svg>
+                      <use href="/assets/images/sprite.svg#menu-icon-1"></use>
+                    </svg>
+                  </span>
+                  <div class="title xl:pb-5 xl:border-b">Oro kondicionieriai</div>
+                </div>
+                <div class="aside-card-body hidden xl:block">
+                  <ul class="space-y-5 text-sm text-gray-700 vertical-links max-h-[450px] overflow-y-auto">
+                    <li>
+                      <a href="#" class="inline-flex gap-2 cursor-pointer hover:text-green-600">
+                        <span class="svg-icon svg-icon--xs">
+                          <svg>
+                            <use href="/assets/images/sprite.svg#icon-list"></use>
+                          </svg>
+                        </span>
+                        <span>Sieniniai kondicionieriai</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="inline-flex gap-2 cursor-pointer hover:text-green-600">
+                        <span class="svg-icon svg-icon--xs">
+                          <svg>
+                            <use href="/assets/images/sprite.svg#icon-list"></use>
+                          </svg>
+                        </span>
+                        <span>Palubiniai kondicionieriai</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="inline-flex gap-2 cursor-pointer hover:text-green-600">
+                        <span class="svg-icon svg-icon--xs">
+                          <svg>
+                            <use href="/assets/images/sprite.svg#icon-list"></use>
+                          </svg>
+                        </span>
+                        <span>Kasetiniai oro kondicionieriai</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="inline-flex gap-2 cursor-pointer hover:text-green-600">
+                        <span class="svg-icon svg-icon--xs">
+                          <svg>
+                            <use href="/assets/images/sprite.svg#icon-list"></use>
+                          </svg>
+                        </span>
+                        <span>Ortakiniai oro kondicionieriai</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="aside-card-foot xl:mt-auto">
+                  <a href="#" class="btn btn--transparent !h-auto !leading-normal !p-0 !font-semibold">
+                    <span class="whitespace-normal">Visos kategorijos prekes</span>
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Products -->
+            <div class="col-span-12 md:col-span-9 p-4">
+              <div class="flex md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible
+            snap-x snap-mandatory scrollbar-thin">
+                <!-- Product Card -->
+                <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="product-card-head">
+                    <span class="product-card-tag">-32%</span>
+                    <div class="product-card-media">
+                      <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h3 class="product-card-title">
+                      <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                        AC140RN4PKG/EU-AC140RXADNG/EU
+                        13,4/15,5 kW
+                        (trifazis)</a>
+                    </h3>
+                    <ul class="product-card-features">
+                      <li>Energijos klasė: <strong>A++/A+</strong></li>
+                      <li>Patalpos iki: <strong>150</strong></li>
+                      <li>Spalva: <strong>Balta/Juoda</strong></li>
+                      <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                    </ul>
+                  </div>
+                  <div class="product-card-foot">
+                    <div class="flex items-center justify-between">
+                      <div class="product-card-price flex gap-2 items-center">
+                        <span class="new text-brand-500">3679,48 €</span>
+                        <span class="old">5411,00 €</span>
+                      </div>
+
+                      <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                        <svg class="svg-icon svg-icon--30">
+                          <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                      <span>
+                        <img src="/assets/images/product-thumb.svg" alt="">
+                      </span>
+                      <span>A Gaminio info. lapas</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Product Card -->
+                <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="product-card-head">
+                    <div class="product-card-media">
+                      <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h3 class="product-card-title">
+                      <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                        AC140RN4PKG/EU-AC140RXADNG/EU
+                        13,4/15,5 kW
+                        (trifazis)</a>
+                    </h3>
+                    <ul class="product-card-features">
+                      <li>Energijos klasė: <strong>A++/A+</strong></li>
+                      <li>Patalpos iki: <strong>150</strong></li>
+                      <li>Spalva: <strong>Balta/Juoda</strong></li>
+                      <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                    </ul>
+                  </div>
+                  <div class="product-card-foot">
+                    <div class="flex items-center justify-between">
+                      <div class="product-card-price flex gap-2 items-center">
+                        <span class="new">3679,48 €</span>
+                      </div>
+                      <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                        <svg class="svg-icon svg-icon--30">
+                          <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                      <span>
+                        <img src="/assets/images/product-thumb.svg" alt="">
+                      </span>
+                      <span>A Gaminio info. lapas</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Product Card -->
+                <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="product-card-head">
+                    <span class="product-card-tag">-32%</span>
+                    <div class="product-card-media">
+                      <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h3 class="product-card-title">
+                      <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                        AC140RN4PKG/EU-AC140RXADNG/EU
+                        13,4/15,5 kW
+                        (trifazis)</a>
+                    </h3>
+                    <ul class="product-card-features">
+                      <li>Energijos klasė: <strong>A++/A+</strong></li>
+                      <li>Patalpos iki: <strong>150</strong></li>
+                      <li>Spalva: <strong>Balta/Juoda</strong></li>
+                      <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                    </ul>
+                  </div>
+                  <div class="product-card-foot">
+                    <div class="flex items-center justify-between">
+                      <div class="product-card-price flex gap-2 items-center">
+                        <span class="new">3679,48 €</span>
+                      </div>
+                      <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                        <svg class="svg-icon svg-icon--30">
+                          <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                      <span>
+                        <img src="/assets/images/product-thumb.svg" alt="">
+                      </span>
+                      <span>A Gaminio info. lapas</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog" class="section pt-14">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="section-header mb-7">
+            <h2 class="section-title">Straipsniai</h2>
+          </div>
+          <div class="section-body">
+            <div class="md:grid md:grid-cols-3 md:gap-5 flex gap-4  overflow-x-auto md:overflow-visible
+            snap-x snap-mandatory scrollbar-thin">
+              <!-- Card -->
+              <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="blog-card-head">
+                  <div class="blog-card-media" aspect-ratio="427/250">
+                    <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                  </div>
+                </div>
+                <div class="blog-card-body">
+                  <div class="flex flex-col gap-5">
+                    <div class="inline-flex items-center gap-4">
+                      <span class="blog-card-date"> 2025-05-26 </span>
+                      <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                    </div>
+                    <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti apie
+                        grindinio šildymo
+                        efektyvumą</a></div>
+                    <div class="blog-description line-clamp-4">
+                      Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                      darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                      ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                      o montavimo specialistai taip pat rekomenduoju.
+                    </div>
+                  </div>
+
+                </div>
+                <div class="blog-card-foot">
+                  <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                    Visi atsiliepimai
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="blog-card-head">
+                  <div class="blog-card-media" aspect-ratio="427/250">
+                    <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                  </div>
+                </div>
+                <div class="blog-card-body">
+                  <div class="flex flex-col gap-5">
+                    <div class="inline-flex items-center gap-4">
+                      <span class="blog-card-date"> 2025-05-26 </span>
+                      <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                    </div>
+                    <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti apie
+                        grindinio šildymo
+                        efektyvumą</a></div>
+                    <div class="blog-description line-clamp-4">
+                      Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                      darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                      ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                      o montavimo specialistai taip pat rekomenduoju.
+                    </div>
+                  </div>
+
+                </div>
+                <div class="blog-card-foot">
+                  <a href="#" class="!h-auto !leading-normal !p-0 btn btn--transparent">
+                    Visi atsiliepimai
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="blog-card-head">
+                  <div class="blog-card-media" aspect-ratio="427/250">
+                    <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                  </div>
+                </div>
+                <div class="blog-card-body">
+                  <div class="flex flex-col gap-5">
+                    <div class="inline-flex items-center gap-4">
+                      <span class="blog-card-date"> 2025-05-26 </span>
+                      <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                    </div>
+                    <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti apie
+                        grindinio šildymo
+                        efektyvumą</a></div>
+                    <div class="blog-description line-clamp-4">
+                      Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                      darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                      ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                      o montavimo specialistai taip pat rekomenduoju.
+                    </div>
+                  </div>
+
+                </div>
+                <div class="blog-card-foot">
+                  <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                    Visi atsiliepimai
+                    <span class="svg-icon svg-icon--30">
+                      <svg>
+                        <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-foot mt-8 text-center">
+            <a href="#"
+              class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
+              Visi straipsniai
+              <span class="svg-icon svg-icon--30">
+                <svg>
+                  <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial" class="section py-14">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="section-header mb-7">
+            <h2 class="section-title">Atsiliepimai</h2>
+          </div>
+          <div class="section-body">
+            <!-- Testimonials content here -->
+            <div class="md:grid md:grid-cols-3 md:gap-5 flex gap-4  overflow-x-auto md:overflow-visible
+            snap-x snap-mandatory scrollbar-thin">
+              <!-- Card -->
+              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="testimonial-card-head">
+                  <div class="flex gap-2 text-yellow-400">
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+                <div class="testimonial-card-body">
+                  <div class="testimonial-quote">
+                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                    o montavimo specialistai taip pat rekomenduoju.
+                  </div>
+                </div>
+                <div class="testimonial-card-foot flex items-center justify-between">
+                  <span class="posted-by">
+                    Mindaugas
+                  </span>
+                  <span class="posted-date">
+                    2026-01-10
+                  </span>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="testimonial-card-head">
+                  <div class="flex gap-2 text-yellow-400">
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+                <div class="testimonial-card-body">
+                  <div class="testimonial-quote">
+                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                    darbuotojas padėjo išsirinkti optimalų modelį
+                  </div>
+                </div>
+                <div class="testimonial-card-foot flex items-center justify-between">
+                  <span class="posted-by">
+                    Mindaugas
+                  </span>
+                  <span class="posted-date">
+                    2026-01-10
+                  </span>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="testimonial-card-head">
+                  <div class="flex gap-2 text-yellow-400">
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                    <i class="svg-icon svg-icon--20">
+                      <svg class="text-brand-500">
+                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                    </i>
+                  </div>
+                </div>
+                <div class="testimonial-card-body">
+                  <div class="testimonial-quote">
+                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                    o montavimo specialistai taip pat rekomenduoju.
+                  </div>
+                </div>
+                <div class="testimonial-card-foot flex items-center justify-between">
+                  <span class="posted-by">
+                    Mindaugas
+                  </span>
+                  <span class="posted-date">
+                    2026-01-10
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-foot mt-8 text-center">
+            <a href="#"
+              class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
+              Visi atsiliepimai
+              <span class="svg-icon svg-icon--30">
+                <svg>
+                  <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-main">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="flex gap-7 md:gap-5 md:flex-row flex-col">
+            <div class="flex-1">
+              <div class="footer-meta">
+                <div class="footer-meta-head">AirWay.lt</div>
+                <div class="footer-meta-body">
+                  <nav class="footer-nav">
+                    <a href="#">Apie mus</a>
+                    <a href="#">Atsiliepimai</a>
+                    <a href="#">Kontaktai</a>
+                    <a href="#">Tinklaraštis</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="footer-meta">
+                <div class="footer-meta-head">Informacija</div>
+                <div class="footer-meta-body">
+                  <nav class="footer-nav">
+                    <a href="#">Prekių garantija ir grąžinimas</a>
+                    <a href="#">Atsiskaitymo būdai</a>
+                    <a href="#">Prekių pristatymas</a>
+                    <a href="#">Pirkimo taisyklės</a>
+                    <a href="#">Privatumo politika</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="footer-meta">
+                <div class="footer-meta-head">Populiarios kategorijos</div>
+                <div class="footer-meta-body">
+                  <nav class="footer-nav">
+                    <a href="#">Oro kondicionieriai</a>
+                    <a href="#">Rekuperatoriai</a>
+                    <a href="#">Šilumos siurbliai oras vanduo</a>
+                    <a href="#">Mobilūs oro kondicionieriai</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="footer-meta">
+                <div class="footer-meta-head">Kontaktai</div>
+                <div class="footer-meta-body">
+                  <div class="contact-meta">
+                    <div class="contact-meta-phone">+370 622 94999</div>
+                    <a class="contact-meta-email mt-2" href="mailto:prekyba@airway.lt">prekyba@airway.lt</a>
+                    <div class="contact-meta-address mt-4">
+                      Conrema Baltic, UAB<br>
+                      Įmonės kodas: 305704890<br>
+                      PVM mokėtojo kodas: LT100014037715<br>
+                      Tarandės g. 2, Vilnius, Lietuva
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="flex md:flex-row flex-col justify-between md:items-center gap-2 md:gap-4">
+            <div class="copyright">© 2023-2026 AirWay. Visos teisės saugomos.</div>
+            <div class="copyright">
+              <div class="">Sukurta:<b> SeoRocket</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger-js");
+      const nav = document.getElementById("HDR-NAV");
+      const overlay = document.getElementById("nav-overlay");
+
+      function openNav() {
+        nav.classList.remove("-translate-x-full");
+        nav.classList.add("translate-x-0");
+        overlay.classList.remove("opacity-0", "pointer-events-none");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeNav() {
+        nav.classList.add("-translate-x-full");
+        nav.classList.remove("translate-x-0");
+        overlay.classList.add("opacity-0", "pointer-events-none");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      // expose globally for ✕ button
+      window.closeHeaderNav = closeNav;
+
+      if (hamburger) hamburger.addEventListener("click", openNav);
+      if (overlay) overlay.addEventListener("click", closeNav);
+    });
+  </script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabButtons = document.querySelectorAll(".tabs-link[data-menu-id]");
+      const tabPanels = document.querySelectorAll(".tab-content");
+
+      function activateTab(targetId) {
+        // buttons active state
+        tabButtons.forEach(btn => {
+          btn.classList.toggle(
+            "is-current",
+            btn.getAttribute("data-menu-id") === targetId
+          );
+        });
+
+        // panels show / hide
+        tabPanels.forEach(panel => {
+          panel.classList.toggle(
+            "is-visible",
+            "#" + panel.id === targetId
+          );
+        });
+      }
+
+      // click handling
+      tabButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          activateTab(this.getAttribute("data-menu-id"));
+        });
+      });
+
+      /* ======================
+         TAB CLOSE (BACK MENU)
+      ====================== */
+      window.closeTabContent = function () {
+        // hide all panels
+        tabPanels.forEach(panel => {
+          panel.classList.remove("is-visible");
+        });
+
+        // remove active state from buttons
+        tabButtons.forEach(btn => {
+          btn.classList.remove("is-current");
+        });
+      };
+
+      // optional default
+      if (window.matchMedia("(min-width: 1280px)").matches) {
+        activateTab("#productsTab");
+      }
+    });
+  </script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('.js--hero-slider').slick({
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: `
+        <button class="hero-slider-arrow absolute left-8 top-1/2 -translate-y-1/2">
+          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M9.6 0.599976L0.599998 9.59998L9.6 18.6" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </button>`,
+        nextArrow: `
+        <button class="hero-slider-arrow absolute right-8 top-1/2 -translate-y-1/2">
+          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M0.599976 18.6L9.59998 9.59998L0.599977 0.599975" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </button>`,
+        responsive: [
+          {
+            breakpoint: 1280,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          }
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+$collection-card: '.collection-card';
+
+#{$collection-card} {
+    display: block;
+    position: relative;
+
+    &__title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        font-size: 12px;
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: .15rem 0;
+        overflow: hidden;
+    }
+
+    &__media {
+        aspect-ratio: 1/1;
+        background-color: #f0f0f0;
+        display: flex;
+        width: 100%;
+
+        &[--ratio="16/9"] {
+            aspect-ratio: 16/9;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+$collection:'.collection';
+
+#{$collection} {
+    background-color: #fff;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+    }
+
+    &-footer {
+        padding-top: 1rem;
+        margin-top: auto;
+    }
+
+    .link {
+        color: #2162a1;
+        font-size: .875rem;
+
+        &:hover {
+            color: #0c3353;
+        }
+    }
+}
+
+[data-view="1"] {
+    .collection-card {
+        &__title {
+            display: none;
+        }
+    }
+}
+
+.collection--feed {
+    display: block;
+}

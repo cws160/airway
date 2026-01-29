@@ -1,0 +1,28 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    min-height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #445664;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

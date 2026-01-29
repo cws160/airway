@@ -1,0 +1,111 @@
+$footer:'.footer';
+
+#{$footer} {
+    font-size: .875rem;
+    margin-top: auto;
+    background-color: #445664;
+    color: #fff;
+
+    &-main {
+        padding: 3.125rem 0;
+
+        @media (max-width:1280px) {
+            padding: 2rem 0;
+        }
+    }
+
+    &-bottom {
+        padding: 1.25rem 0;
+
+        @media (max-width:1280px) {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &-meta {
+        &__head {
+            margin-bottom: .875rem;
+
+            h5 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+$footer-nav:'.footer-nav';
+
+#{$footer-nav} {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    @media (max-width:1280px) {
+        gap: .5rem;
+    }
+
+    a {
+        line-height: 1.4;
+        display: block;
+        font-size: .9375rem;
+
+        @media (max-width:1280px) {
+            font-size: .875rem;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+}
+
+$footer-meta:'.footer-meta';
+
+#{$footer-meta} {
+    &-head {
+        font-size: clamp(1rem, 0.064vw + 0.986rem, 1.063rem);
+        font-weight: 600;
+        margin-bottom: 1.875rem;
+
+        @media (max-width:1280px) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+$contact-meta:'.contact-meta';
+
+#{$contact-meta} {
+    &-address {
+        font-size: .875rem;
+    }
+
+    &-phone {
+        font-weight: 500;
+        font-size: calc(clamp(1.25rem, 0.318vw + 1.18rem, 1.563rem));
+
+        @media (max-width:1280px) {
+            font-size: 1rem;
+        }
+    }
+
+    &-email {
+        font-weight: 500;
+        font-size: clamp(1rem, 0.064vw + 0.986rem, 1.063rem);
+
+        @media (max-width:1280px) {
+            font-size: .875rem;
+        }
+    }
+}
+
+.copyright {
+    font-size: calc(clamp(0.813rem, 0vw + 0.813rem, 0.813rem));
+
+    b {
+        font-weight: 600;
+    }
+}

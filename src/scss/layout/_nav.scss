@@ -1,0 +1,89 @@
+$nav-links:'.nav-links';
+$nav-link:'.nav-link';
+
+#{$nav-links} {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow: auto;
+
+    #{$nav-link} {
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+$nav:'.nav';
+
+#{$nav} {
+    &-link {
+        font-size: .9375rem;
+        padding: .75rem 1rem;
+        display: block;
+        font-weight: 500;
+
+        @media (max-width:1280px) {
+            padding: .5rem 0;
+        }
+
+        &.is-current {
+            background-color: #fff;
+            color: #445664;
+        }
+
+        @media (min-width:1280px) {
+            &:hover {
+                background-color: #fff;
+                color: #445664;
+            }
+        }
+
+
+    }
+}
+
+
+$main-nav:'.main-nav';
+
+#{$main-nav} {
+    &__list {
+        display: flex;
+        gap: .5rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @media (max-width:1280px) {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .625em;
+        font-weight: 600;
+        font-size: .9375rem;
+        text-align: center;
+        padding: .625rem;
+        color: #445664;
+
+        @media (max-width:1280px) {
+            flex-direction: row;
+            text-align: start;
+            font-size: .875rem;
+            padding: .25rem 0;
+            line-height: 1.2;
+        }
+    }
+
+    .svg-icon--40 {
+        @media (max-width:1280px) {
+            --size: 30px;
+        }
+    }
+}

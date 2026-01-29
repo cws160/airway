@@ -1,0 +1,118 @@
+.btn-hamburger {
+    position: relative;
+    z-index: 16;
+    width: 24px;
+    height: 24px;
+    z-index: 1
+}
+
+.btn-hamburger::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: currentColor;
+    -webkit-transition: .25s ease-in-out all;
+    transition: .25s ease-in-out all;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    cursor: default
+}
+
+.btn-hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 16px;
+    background-color: currentColor;
+    -webkit-transition: height 0s linear, -webkit-transform .6s ease-in-out;
+    transition: height 0s linear, -webkit-transform .6s ease-in-out;
+    transition: height 0s linear, transform .6s ease-in-out;
+    transition: height 0s linear, transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+    -webkit-transition-delay: .6s, 0s, 0s;
+    transition-delay: .6s, 0s, 0s;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center
+}
+
+.btn-hamburger span:after {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 2px;
+    width: 14px;
+    background-color: inherit;
+    content: "";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease, -webkit-transform .3s ease;
+    -webkit-transition-delay: .9s, .9s, .6s, .6s;
+    transition-delay: .9s, .9s, .6s, .6s
+}
+
+.btn-hamburger span:before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 2px;
+    width: 18px;
+    background-color: inherit;
+    content: "";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease, -webkit-transform .3s ease;
+    -webkit-transition-delay: .9s, .9s, .6s, .6s;
+    transition-delay: .9s, .9s, .6s, .6s
+}
+
+.btn-hamburger.is-active::before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all
+}
+
+.btn-hamburger.is-active span {
+    height: 0;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: width 0s linear, -webkit-transform 0s ease;
+    transition: width 0s linear, -webkit-transform 0s ease;
+    transition: width 0s linear, transform 0s ease;
+    transition: width 0s linear, transform 0s ease, -webkit-transform 0s ease;
+    -webkit-transition-delay: .3s, .6s, .6s;
+    transition-delay: .3s, .6s, .6s
+}
+
+.btn-hamburger.is-active span:after {
+    top: 0;
+    width: 18px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-delay: 0s, 0s, .3s, .3s;
+    transition-delay: 0s, 0s, .3s, .3s
+}
+
+.btn-hamburger.is-active span:before {
+    top: 0;
+    width: 18px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition-delay: 0s, 0s, .3s, .3s;
+    transition-delay: 0s, 0s, .3s, .3s
+}
