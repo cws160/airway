@@ -24,8 +24,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Slick JS -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+  <script src="./assets/js/ui-functions.js"></script>
 </head>
+
 
 <body>
   <div id="page-wrapper">
@@ -382,313 +383,282 @@
                 </i>
               </li>
               <!-- Current page -->
-              <li class="text-[#AFB1BB]" aria-current="page"> Atsiliepimai </li>
+              <li class="text-[#AFB1BB]" aria-current="page"> Tinklaraštis </li>
             </ol>
           </nav>
         </div>
       </section>
-      <section id="testimonial" class="section py-14">
+      <section id="blog" class="section py-14">
         <div class="max-w-[1360px] px-[20px] mx-auto">
-          <div class="section-header mb-10 flex justify-between items-center">
-            <h2 class="section-title --large">Klientų atsiliepimai</h2>
+          <div class="section-header mb-12 text-center">
+            <h2 class="section-title --large mb-7">Tinklaraštis</h2>
+            <div class="max-w-[1360px] mx-auto px-5">
+              <!-- Tabs -->
+              <div class="flex flex-wrap gap-4 justify-center mb-10">
+                <button class="tab-button is-current" data-tab="tab-01">
+                  Visi straipsniai
+                </button>
+                <button class="tab-button" data-tab="tab-02">
+                  Oro kondicioneriai
+                </button>
+                <button class="tab-button" data-tab="tab-03">
+                  Naudingi patarimai
+                </button>
+                <button class="tab-button" data-tab="tab-04">
+                  Sėkmės istorijos
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="section-body">
+            <!-- Tab Content -->
+            <div class="tab-content is-visible" id="tab-01">
+              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-5 gap-4">
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0 btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0 btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                  <div class="blog-card-head">
+                    <div class="blog-card-media" aspect-ratio="427/250">
+                      <a href="#"><img src="/assets/images/blog-img.jpg" alt="Blog Image" class=""></a>
+                    </div>
+                  </div>
+                  <div class="blog-card-body">
+                    <div class="flex flex-col gap-5">
+                      <div class="inline-flex items-center gap-4">
+                        <span class="blog-card-date"> 2025-05-26 </span>
+                        <span class="blog-card-category text-brand-500">Naudingi patarimai</span>
+                      </div>
+                      <div class="blog-title line-clamp-2"><a href="#" class="hover:text-brand-500">Ką reikėtų žinoti
+                          apie
+                          grindinio šildymo
+                          efektyvumą</a></div>
+                      <div class="blog-description line-clamp-4">
+                        Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
+                        darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
+                        ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
+                        o montavimo specialistai taip pat rekomenduoju.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="blog-card-foot">
+                    <a href="#" class="!h-auto !leading-normal !p-0  btn btn--transparent">
+                      Visi atsiliepimai
+                      <span class="svg-icon svg-icon--30">
+                        <svg>
+                          <use href="/assets/images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-02">
+              <h2>Tab 2</h2>
+            </div>
+            <div class="tab-content" id="tab-03">
+              <h2>Tab 3</h2>
+            </div>
+            <div class="tab-content" id="tab-04">
+              <h2>Tab 4</h2>
+            </div>
+
+          </div>
+          <div class="section-foot mt-8 text-center">
             <a href="#"
               class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
-              Visi atsiliepimai
+              Visi straipsniai
               <span class="svg-icon svg-icon--30">
                 <svg>
                   <use href="/assets/images/sprite.svg#icon-arrow"></use>
                 </svg>
               </span>
             </a>
-          </div>
-          <div class="section-body">
-            <!-- Testimonials content here -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-5 gap-4">
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
-                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
-                    o montavimo specialistai taip pat rekomenduoju.
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
-                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
-                    o montavimo specialistai taip pat rekomenduoju.
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
-                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
-                    o montavimo specialistai taip pat rekomenduoju.
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="testimonial-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
-                <div class="testimonial-card-head">
-                  <div class="flex gap-2 text-yellow-400">
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                    <i class="svg-icon svg-icon--20">
-                      <svg class="text-brand-500">
-                        <use xlink:href="/assets/images/sprite.svg#icon-star"></use>
-                      </svg>
-                    </i>
-                  </div>
-                </div>
-                <div class="testimonial-card-body">
-                  <div class="testimonial-quote">
-                    Pirkau oro kondicionierių iš Airway – konsultacija buvo labai išsami,
-                    darbuotojas padėjo išsirinkti optimalų modelį pagal mano patalpos dydį
-                    ir poreikius. Siunta atvyko laiku, įrangos pakuotė tvarkinga,
-                    o montavimo specialistai taip pat rekomenduoju.
-                  </div>
-                </div>
-                <div class="testimonial-card-foot flex items-center justify-between">
-                  <span class="posted-by">
-                    Mindaugas
-                  </span>
-                  <span class="posted-date">
-                    2026-01-10
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -769,7 +739,39 @@
       </div>
     </footer>
   </div>
-  <script src="./assets/js/ui-functions.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetId = button.getAttribute("data-tab");
+          const targetTab = document.getElementById(targetId);
+
+          // reset buttons
+          tabButtons.forEach(btn =>
+            btn.classList.remove("is-current")
+          );
+          button.classList.add("is-current");
+
+          // hide all tabs
+          tabContents.forEach(tab => {
+            tab.classList.remove("is-visible");
+            tab.classList.add("hidden");
+          });
+
+          // show active tab
+          if (targetTab) {
+            targetTab.classList.remove("hidden");
+            targetTab.classList.add("is-visible");
+          }
+        });
+      });
+    });
+  </script>
+
+
 
 </body>
 

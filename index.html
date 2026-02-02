@@ -1011,6 +1011,52 @@
     </footer>
   </div>
   <script src="/assets/js/ui-functions.js"></script>
+  <script>
+    // SLIDER START
+    $(document).ready(function () {
+      $('.js--hero-slider').slick({
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: `
+        <button class="hero-slider-arrow absolute left-8 top-1/2 -translate-y-1/2">
+          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M9.6 0.599976L0.599998 9.59998L9.6 18.6" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </button>`,
+        nextArrow: `
+        <button class="hero-slider-arrow absolute right-8 top-1/2 -translate-y-1/2">
+          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M0.599976 18.6L9.59998 9.59998L0.599977 0.599975" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </button>`,
+        responsive: [
+          {
+            breakpoint: 1280,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              dots: true,
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </body>
 
 </html>
