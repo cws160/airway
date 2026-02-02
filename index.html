@@ -29,7 +29,7 @@
 
 <body>
   <div id="page-wrapper">
-    <header id="header" class="header">
+    <header id="header" class="header relative z-20">
       <div class="header-main">
         <div class="max-w-[1360px] px-[20px] mx-auto">
           <div class="flex flex-wrap md:flex-nowrap justify-between items-center xl:gap-20 md:gap-10 gap-3">
@@ -49,7 +49,6 @@
                   <input placeholder="Search ..." class="form-control input-trigger-js" id="srch-keyword-js" type="text"
                     name="" value="">
                 </div>
-
                 <div class="main-search__action">
                   <button type="submit" class="form-button" aria-label="Search">
                     <svg class="svg-icon text-brand-500">
@@ -142,10 +141,10 @@
               </button>
             </div>
             <div class="max-w-[1360px] px-[20px] mx-auto">
-              <nav class="main-nav">
+              <nav class="main-nav relative">
                 <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">
+                  <li class="main-nav__item has-children">
+                    <a class="main-nav__link is-current" href="#">
                       <span class="svg-icon svg-icon--40">
                         <svg>
                           <use href="/assets/images/sprite.svg#menu-icon-1"></use>
@@ -153,8 +152,65 @@
                       </span>
                       <span class="label">Oro kondicionieriai</span>
                     </a>
+                    <span class="dropdown-trigger"></span>
+                    <div class="mega-submenu">
+                      <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+                        <div class="col-span-1 xl:col-span-3">
+                          <div class="widget-group">
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Sieniniai kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Palubiniai kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Kasetiniai oro kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Ortakiniai oro kondicionieriai</a></div>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Multi-split kondicionieriai</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Vidiniai blokai</a></li>
+                                <li><a href="#">Išoriniai blokai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Multi-split kondicionieriai</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Vidiniai blokai</a></li>
+                                <li><a href="#">Išoriniai blokai</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-1">
+                          <div class="media-widget">
+                            <img src="assets/images/285x200__img-1.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
-                  <li class="main-nav__item">
+                  <li class="main-nav__item has-children">
                     <a class="main-nav__link" href="#">
                       <span class="svg-icon svg-icon--40">
                         <svg>
@@ -163,6 +219,63 @@
                       </span>
                       <span class="label">Šilumos siurbliai oras vanduo</span>
                     </a>
+                    <span class="dropdown-trigger"></span>
+                    <div class="mega-submenu">
+                      <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+                        <div class="col-span-1 xl:col-span-3">
+                          <div class="widget-group">
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Sieniniai kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Palubiniai kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Kasetiniai oro kondicionieriai</a></div>
+                              <div class="widget-title"><a href="#">Ortakiniai oro kondicionieriai</a></div>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Multi-split kondicionieriai</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Vidiniai blokai</a></li>
+                                <li><a href="#">Išoriniai blokai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Kondicionieriai pagal gamintoją</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Samsung oro kondicionieriai</a></li>
+                                <li><a href="#">Gree kondicionieriai</a></li>
+                                <li><a href="#">Daikin kondicionieriai</a></li>
+                              </ul>
+                            </div>
+                            <div class="widget-column">
+                              <div class="widget-title"><a href="#">Multi-split kondicionieriai</a></div>
+                              <ul class="mega-menu-list">
+                                <li><a href="#">Vidiniai blokai</a></li>
+                                <li><a href="#">Išoriniai blokai</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-1">
+                          <div class="media-widget">
+                            <img src="assets/images/285x200__img-1.jpg" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li class="main-nav__item">
                     <a class="main-nav__link" href="#">
@@ -249,7 +362,7 @@
         </div>
     </header>
     <div id="nav-overlay"
-      class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+      class="fixed inset-0 bg-black/50 z-10 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
     </div>
     <main class="main" id="main">
       <section id="home" class="section">
@@ -924,9 +1037,6 @@
       if (overlay) overlay.addEventListener("click", closeNav);
     });
   </script>
-
-
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const tabButtons = document.querySelectorAll(".tabs-link[data-menu-id]");
@@ -978,7 +1088,40 @@
       }
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
 
+      dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener("click", function (e) {
+          // only below 1280px
+          if (window.innerWidth >= 1280) return;
+
+          e.preventDefault();
+
+          const parentItem = this.closest(".has-children");
+          const submenu = parentItem.querySelector(".mega-submenu");
+
+          // close all others
+          document.querySelectorAll(".mega-submenu.is-visible").forEach(menu => {
+            if (menu !== submenu) {
+              menu.classList.remove("is-visible");
+            }
+          });
+
+          document.querySelectorAll(".dropdown-trigger.is-open").forEach(btn => {
+            if (btn !== this) {
+              btn.classList.remove("is-open");
+            }
+          });
+
+          // toggle current
+          submenu.classList.toggle("is-visible");
+          this.classList.toggle("is-open");
+        });
+      });
+    });
+  </script>
 
 
   <script>
@@ -1026,7 +1169,6 @@
       });
     });
   </script>
-
 </body>
 
 </html>
