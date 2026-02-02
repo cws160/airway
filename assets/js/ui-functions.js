@@ -115,3 +115,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+//Start of Common Tab
+var _tab = $('.js-tabs');
+_tab.each(function () {
+    var _thisTab = $(this),
+        _tabTrigger = _thisTab.find('a'),
+        _tabTarget = [];
+    _tabTrigger.each(function () {
+        var _this = $(this),
+            _target = $(_this.attr('href'));
+
+        _tabTarget.push(_target);
+
+        _this.on('click', function (e) {
+            var _index = _this.parent().index(),
+                _move = 0;
+            e.preventDefault();
+
+            for (var i = 0; i < _index; i++) { _move += $(_tabTrigger[i]).outerWidth(); }
+
+            _tabTrigger.removeClass('is-current');
+
+            $.each(_tabTarget, function (index, _thisTarget) {
+                _thisTarget.removeClass('is-visible');
+            });
+
+            _this.addClass('is-current');
+            _target.addClass('is-visible');
+            _thisTab.animate({
+                scrollLeft: Math.max(0, _move)
+            }, 800);
+
+        });
+    });
+});
+
+//End of Common Tab

@@ -29,7 +29,7 @@
 
 <body>
   <div id="page-wrapper">
-    <header id="header" class="header relative z-20">
+    <header id="header" class="header relative z-2">
       <div class="header-main">
         <div class="max-w-[1360px] px-[20px] mx-auto">
           <div class="flex flex-wrap md:flex-nowrap justify-between items-center xl:gap-20 md:gap-10 gap-3">
@@ -360,10 +360,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div id="nav-overlay"
+        class="fixed inset-0 bg-black/50 z-10 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+      </div>
     </header>
-    <div id="nav-overlay"
-      class="fixed inset-0 bg-black/50 z-10 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
-    </div>
     <main class="main" id="main">
       <section id="home" class="section">
         <div class="hero-slider js--hero-slider">

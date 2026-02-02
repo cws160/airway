@@ -55,3 +55,7 @@ $tabs: '.tabs';
         border-color: var(--brand-color);
     }
 }
+
+.tabs-content:not(.is-visible) {
+    display: none;
+}

@@ -24,13 +24,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Slick JS -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="./assets/js/ui-functions.js"></script>
+
 </head>
 
 
 <body>
   <div id="page-wrapper">
-    <header id="header" class="header relative z-20">
+    <header id="header" class="header relative z-2">
       <div class="header-main">
         <div class="max-w-[1360px] px-[20px] mx-auto">
           <div class="flex flex-wrap md:flex-nowrap justify-between items-center xl:gap-20 md:gap-10 gap-3">
@@ -361,10 +361,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div id="nav-overlay"
+        class="fixed inset-0 bg-black/50 z-10 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+      </div>
     </header>
-    <div id="nav-overlay"
-      class="fixed inset-0 bg-black/50 z-10 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
-    </div>
     <main class="main" id="main">
       <section class="section">
         <div class="max-w-[1360px] px-[20px] mx-auto">
@@ -388,31 +389,31 @@
           </nav>
         </div>
       </section>
-      <section id="blog" class="section py-14">
+      <section class="section py-14 pt-7">
         <div class="max-w-[1360px] px-[20px] mx-auto">
           <div class="section-header mb-12 text-center">
             <h2 class="section-title --large mb-7">Tinklaraštis</h2>
             <div class="max-w-[1360px] mx-auto px-5">
               <!-- Tabs -->
-              <div class="flex flex-wrap gap-4 justify-center mb-10">
-                <button class="tab-button is-current" data-tab="tab-01">
+              <div class="flex flex-wrap gap-4 justify-center mb-10 js-tabs">
+                <a class="tab-button is-current" href="#tab_01">
                   Visi straipsniai
-                </button>
-                <button class="tab-button" data-tab="tab-02">
+                </a>
+                <a class="tab-button" href="#tab_02">
                   Oro kondicioneriai
-                </button>
-                <button class="tab-button" data-tab="tab-03">
+                </a>
+                <a class="tab-button" href="#tab_03">
                   Naudingi patarimai
-                </button>
-                <button class="tab-button" data-tab="tab-04">
+                </a>
+                <a class="tab-button" href="#tab_04">
                   Sėkmės istorijos
-                </button>
+                </a>
               </div>
             </div>
           </div>
           <div class="section-body">
             <!-- Tab Content -->
-            <div class="tab-content is-visible" id="tab-01">
+            <div class="tabs-content is-visible" id="tab_01">
               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-5 gap-4">
                 <!-- Card -->
                 <div class="blog-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
@@ -638,27 +639,239 @@
                 </div>
               </div>
             </div>
-            <div class="tab-content" id="tab-02">
+            <div class="tabs-content" id="tab_02">
               <h2>Tab 2</h2>
             </div>
-            <div class="tab-content" id="tab-03">
+            <div class="tabs-content" id="tab_03">
               <h2>Tab 3</h2>
             </div>
-            <div class="tab-content" id="tab-04">
+            <div class="tabs-content" id="tab_04">
               <h2>Tab 4</h2>
             </div>
-
           </div>
-          <div class="section-foot mt-8 text-center">
-            <a href="#"
-              class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition btn">
-              Visi straipsniai
-              <span class="svg-icon svg-icon--30">
-                <svg>
-                  <use href="/assets/images/sprite.svg#icon-arrow"></use>
+          <div class="section-foot mt-10 text-center">
+            <nav class="flex justify-center items-center gap-3 text-md font-semibold">
+
+              <!-- Prev -->
+              <a href="#"
+                class="w-9 h-9 flex items-center justify-center rounded-full border text-gray-500 hover:bg-gray-100 transition">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.417 10.9999H4.58366M4.58366 10.9999L11.0003 17.4166M4.58366 10.9999L11.0003 4.58325"
+                    stroke="#445664" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
+              </a>
+
+              <!-- Page 1 -->
+              <a href="#"
+                class="w-9 h-9 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-100 transition">
+                1
+              </a>
+
+              <!-- Active Page -->
+              <span class="w-9 h-9 flex items-center justify-center rounded-full bg-brand-500 text-white font-semibold">
+                2
               </span>
-            </a>
+
+              <!-- Page 3 -->
+              <a href="#"
+                class="w-9 h-9 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-100 transition">
+                3
+              </a>
+
+              <!-- Dots -->
+              <span class="px-1 text-gray-500">…</span>
+
+              <!-- Last Page -->
+              <a href="#"
+                class="w-9 h-9 flex items-center justify-center rounded-full border text-gray-700 hover:bg-gray-100 transition">
+                10
+              </a>
+
+              <!-- Next -->
+              <a href="#"
+                class="w-9 h-9 flex items-center justify-center rounded-full border text-gray-500 hover:bg-gray-100 transition">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.58301 10.9999H17.4163M17.4163 10.9999L10.9997 17.4166M17.4163 10.9999L10.9997 4.58325"
+                    stroke="#445664" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="section py-14">
+        <div class="max-w-[1360px] px-[20px] mx-auto">
+          <div class="section-header mb-8">
+            <h2 class="section-title">Rekomenduojamos prekės</h2>
+          </div>
+          <div class="section-body">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <!-- Product Card -->
+              <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="product-card-head">
+                  <span class="product-card-tag">-32%</span>
+                  <div class="product-card-media">
+                    <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                  </div>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">
+                    <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                      AC140RN4PKG/EU-AC140RXADNG/EU
+                      13,4/15,5 kW
+                      (trifazis)</a>
+                  </h3>
+                  <ul class="product-card-features">
+                    <li>Energijos klasė: <strong>A++/A+</strong></li>
+                    <li>Patalpos iki: <strong>150</strong></li>
+                    <li>Spalva: <strong>Balta/Juoda</strong></li>
+                    <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                  </ul>
+                </div>
+                <div class="product-card-foot">
+                  <div class="flex items-center justify-between">
+                    <div class="product-card-price flex gap-2 items-center">
+                      <span class="new text-brand-500">3679,48 €</span>
+                      <span class="old">5411,00 €</span>
+                    </div>
+
+                    <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                      <svg class="svg-icon svg-icon--30">
+                        <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                    <span>
+                      <img src="/assets/images/product-thumb.svg" alt="">
+                    </span>
+                    <span>A Gaminio info. lapas</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Product Card -->
+              <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="product-card-head">
+                  <div class="product-card-media">
+                    <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                  </div>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">
+                    <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                      AC140RN4PKG/EU-AC140RXADNG/EU
+                      13,4/15,5 kW
+                      (trifazis)</a>
+                  </h3>
+                  <ul class="product-card-features">
+                    <li>Energijos klasė: <strong>A++/A+</strong></li>
+                    <li>Patalpos iki: <strong>150</strong></li>
+                    <li>Spalva: <strong>Balta/Juoda</strong></li>
+                    <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                  </ul>
+                </div>
+                <div class="product-card-foot">
+                  <div class="flex items-center justify-between">
+                    <div class="product-card-price flex gap-2 items-center">
+                      <span class="new">3679,48 €</span>
+                    </div>
+                    <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                      <svg class="svg-icon svg-icon--30">
+                        <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                    <span>
+                      <img src="/assets/images/product-thumb.svg" alt="">
+                    </span>
+                    <span>A Gaminio info. lapas</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Product Card -->
+              <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="product-card-head">
+                  <span class="product-card-tag">-32%</span>
+                  <div class="product-card-media">
+                    <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                  </div>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">
+                    <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                      AC140RN4PKG/EU-AC140RXADNG/EU
+                      13,4/15,5 kW
+                      (trifazis)</a>
+                  </h3>
+                  <ul class="product-card-features">
+                    <li>Energijos klasė: <strong>A++/A+</strong></li>
+                    <li>Patalpos iki: <strong>150</strong></li>
+                    <li>Spalva: <strong>Balta/Juoda</strong></li>
+                    <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                  </ul>
+                </div>
+                <div class="product-card-foot">
+                  <div class="flex items-center justify-between">
+                    <div class="product-card-price flex gap-2 items-center">
+                      <span class="new">3679,48 €</span>
+                    </div>
+                    <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                      <svg class="svg-icon svg-icon--30">
+                        <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                    <span>
+                      <img src="/assets/images/product-thumb.svg" alt="">
+                    </span>
+                    <span>A Gaminio info. lapas</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Product Card -->
+              <div class="product-card min-w-[80%] sm:min-w-[60%] md:min-w-0 snap-start md:h-full">
+                <div class="product-card-head">
+                  <span class="product-card-tag">-32%</span>
+                  <div class="product-card-media">
+                    <a href="#"><img src="/assets/images/product-img-1.jpg" alt=""></a>
+                  </div>
+                </div>
+                <div class="product-card-body">
+                  <h3 class="product-card-title">
+                    <a href="#" class="line-clamp-3">Samsung kasetinis oro kondicionierius
+                      AC140RN4PKG/EU-AC140RXADNG/EU
+                      13,4/15,5 kW
+                      (trifazis)</a>
+                  </h3>
+                  <ul class="product-card-features">
+                    <li>Energijos klasė: <strong>A++/A+</strong></li>
+                    <li>Patalpos iki: <strong>150</strong></li>
+                    <li>Spalva: <strong>Balta/Juoda</strong></li>
+                    <li>Nominali galia: <strong>13,4/15,5 kW</strong></li>
+                  </ul>
+                </div>
+                <div class="product-card-foot">
+                  <div class="flex items-center justify-between">
+                    <div class="product-card-price flex gap-2 items-center">
+                      <span class="new">3679,48 €</span>
+                    </div>
+                    <button class="btn btn--equal btn--addtocart flex items-center justify-center">
+                      <svg class="svg-icon svg-icon--30">
+                        <use xlink:href="/assets/images/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="mt-4 inline-flex items-center gap-2 text-xs text-green-600 font-semibold">
+                    <span>
+                      <img src="/assets/images/product-thumb.svg" alt="">
+                    </span>
+                    <span>A Gaminio info. lapas</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -739,40 +952,9 @@
       </div>
     </footer>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tabButtons = document.querySelectorAll(".tab-button");
-      const tabContents = document.querySelectorAll(".tab-content");
-
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const targetId = button.getAttribute("data-tab");
-          const targetTab = document.getElementById(targetId);
-
-          // reset buttons
-          tabButtons.forEach(btn =>
-            btn.classList.remove("is-current")
-          );
-          button.classList.add("is-current");
-
-          // hide all tabs
-          tabContents.forEach(tab => {
-            tab.classList.remove("is-visible");
-            tab.classList.add("hidden");
-          });
-
-          // show active tab
-          if (targetTab) {
-            targetTab.classList.remove("hidden");
-            targetTab.classList.add("is-visible");
-          }
-        });
-      });
-    });
-  </script>
-
 
 
 </body>
+<script src="./assets/js/ui-functions.js"></script>
 
 </html>
