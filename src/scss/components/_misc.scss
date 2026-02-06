@@ -110,3 +110,58 @@ select {
     background-color: #9ca3af;
     border-radius: 9999px;
 }
+
+.tick-listing {
+    li {
+        font-weight: 600;
+        font-size: calc(clamp(0.875rem, 0.064vw + 0.861rem, 0.938rem));
+        background-image: url('/assets/images/check-circle.svg');
+        background-repeat: no-repeat;
+        background-position: .625rem;
+        line-height: 1.8;
+        padding: .625rem;
+        padding-left: 46px;
+        background-color: #fff;
+    }
+}
+
+$step-card:'.step-card';
+
+#{$step-card} {
+    &-num {
+        --size: 52px;
+        width: var(--size);
+        height: var(--size);
+        max-width: var(--size);
+        flex: 0 0 var(--size);
+        background: var(--brand-color);
+        color: var(--brand-color-inverse);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(clamp(1.25rem, 0.637vw + 1.111rem, 1.875rem));
+        font-weight: 600;
+    }
+
+    &-title {
+        font-size: calc(clamp(1.25rem, 0.127vw + 1.222rem, 1.375rem));
+        font-weight: 600;
+    }
+}
+
+$counter:'.counter';
+
+#{$counter} {
+    &-label {
+        font-size: calc(clamp(0.875rem, 0.064vw + 0.861rem, 0.938rem));
+    }
+}
+
+.cta-number {
+    font-size: calc(clamp(1.25rem, 0.51vw + 1.139rem, 1.75rem));
+}
+
+.cta-email {
+    font-size: calc(clamp(1rem, 0.255vw + 0.944rem, 1.25rem));
+}

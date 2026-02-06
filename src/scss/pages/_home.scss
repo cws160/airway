@@ -126,6 +126,10 @@ $testimonial-card:'.testimonial-card';
 
     .testimonial-quote {
         font-size: calc(clamp(0.875rem, 0.064vw + 0.861rem, 0.938rem));
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .posted-by {
